@@ -30,7 +30,6 @@ public class UiTest {
     @And("I add the following items to the basket")
     @Test(dataProvider = "basketItems")
     public void addItemsToBasket(String itemName) {
-        // Locate item by its name and click "Add to cart"
         driver.findElement(By.xpath("//div[text()='" + itemName + "']/ancestor::div[@class='inventory_item']//button"))
                 .click();
     }
